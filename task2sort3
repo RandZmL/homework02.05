@@ -1,0 +1,51 @@
+#include <iostream>
+#include <stdlib.h>
+#include <ctime>
+
+
+using namespace std;
+
+int f;
+int i;
+
+
+int main() {
+
+	const int n = 5;
+	int arr[n];
+	int len = 5;
+
+	//генерация элементов
+	srand(time(NULL));
+
+	for (int i = 0; i < n; i++) {
+		arr[i] = rand() % 30 - 10;
+		std::cout << arr[i] << std::endl;
+
+	}
+
+	cout << "==============" << endl;
+
+	void bubbleSort(float arr[], int len); {
+
+		float tmp = 0;
+
+		for (int i = 0; i < len; i++) {
+			for (int j = len - 1; j >= i + 1; j--) {
+				if (arr[j] < arr[j - 1]) {
+
+					tmp = arr[j];
+					arr[j] = arr[j - 1];
+					arr[j - 1] = tmp;
+
+				}
+			}
+			cout << arr[i] << endl;
+		}
+	}
+
+
+
+	
+	return 0;
+}
