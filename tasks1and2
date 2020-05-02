@@ -1,0 +1,55 @@
+#include <iostream>
+#include <stdlib.h>
+#include <ctime>
+
+
+using namespace std;
+
+int f;
+int i;
+
+
+int main() {
+
+	const int n = 5;
+	int arr[n];
+
+	//генерация элементов
+	srand(time(NULL));
+
+	for (int i = 0; i < n; i++) {
+		arr[i] = rand() % 30 - 10;
+		std::cout << arr[i] << std::endl;
+
+	}
+
+	cout << "==============" << endl;
+
+	void Sort1(float data[], int len); {
+		int j = 0;
+		float tmp = 0;
+		int len = 5;
+
+		// поиск наименьшего
+		for (int i = 0; i < len; i++) {
+			
+			j = i;
+
+
+			for (int k = i; k < len; k++) {
+				if (arr[j] > arr[k]) {
+					j = k;
+				}
+			}
+			// замена элементов
+			tmp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = tmp;
+			cout << arr[j] << endl;
+		}
+	}
+
+
+	
+	return 0;
+}
